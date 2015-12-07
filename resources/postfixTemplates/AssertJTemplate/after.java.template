@@ -1,0 +1,7 @@
+import static org.assertj.core.api.Assertions.AssertThat;
+
+public class Foo {
+  void m(Object o) {
+      assertThat(o);
+  }
+}
