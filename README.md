@@ -2,7 +2,7 @@
 
 This is an assertj plugin for IntelliJ.
 
-This plugin adds `.assertThat` postfix.
+This plugin adds `.assertThat` postfix completion.
 
 ## LICENSE
 
