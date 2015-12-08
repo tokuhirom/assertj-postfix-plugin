@@ -10,14 +10,21 @@ sourceCompatibility = 1.8
 
 intellij {
     pluginName 'AssertJ Postfix Plugin'
+    publish {
+        pluginId '8093'
+        // set values in ~/.gradle/gradle.properties.
+        password project.properties['intellij.publish.password']
+        username project.properties['intellij.publish.username']
+    } 
 }
 
 group 'me.geso.assertj_postfix_plugin'
-version '0.0.1'
+version '0.0.2'
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.6'
 }
+
 
 repositories {
     mavenCentral()

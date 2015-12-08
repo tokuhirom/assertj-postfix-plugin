@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <id>me.geso.assertj_postfix_plugin</id>
     <name>AssertJ Postfix Completion Plugin</name>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <vendor email="tokuhirom+intellij@gmail.com" url="http://64p.org">tokuhirom</vendor>
 
     <description><![CDATA[
@@ -10,7 +10,8 @@
 
     <change-notes><![CDATA[
         <ul>
-        <li>0.0.1 - The first release.
+          <li>0.0.2 - Do not insert semicolon.</li>
+          <li>0.0.1 - The first release.</li>
         </ul>
     ]]>
     </change-notes>
