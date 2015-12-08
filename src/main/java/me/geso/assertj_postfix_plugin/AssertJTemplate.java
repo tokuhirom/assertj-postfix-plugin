@@ -27,6 +27,6 @@ public class AssertJTemplate extends StringBasedPostfixTemplate {
     @Nullable
     @Override
     public String getTemplateString(@NotNull PsiElement psiElement) {
-        return  "org.assertj.core.api.Assertions.assertThat($expr$);$END$";
+        return  "org.assertj.core.api.Assertions.assertThat($expr$)$END$";
     }
 }
