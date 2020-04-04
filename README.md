@@ -6,7 +6,7 @@ This plugin adds `.assertThat` postfix completion.
 
 ## Run plugin
 
-    ./gradlew runIdea
+    ./gradlew runIde
 
 ## LICENSE
 

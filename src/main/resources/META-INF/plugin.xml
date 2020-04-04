@@ -1,4 +1,4 @@
-<idea-plugin version="2">
+<idea-plugin>
     <id>me.geso.assertj_postfix_plugin</id>
     <name>AssertJ Postfix Completion Plugin</name>
     <version>0.0.2</version>
@@ -10,6 +10,7 @@
 
     <change-notes><![CDATA[
         <ul>
+          <li>0.0.3 - Support IDEA 2019.2.</li>
           <li>0.0.2 - Do not insert semicolon.</li>
           <li>0.0.1 - The first release.</li>
         </ul>
@@ -29,6 +30,9 @@
         <codeInsight.template.postfixTemplateProvider language="JAVA"
                                                       implementationClass="me.geso.assertj_postfix_plugin.AssertJPostfixTemplateProvider"/>
     </extensions>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
 
     <actions>
     </actions>
