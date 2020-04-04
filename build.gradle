@@ -19,7 +19,7 @@ publishPlugin {
 }
 
 group 'me.geso.assertj_postfix_plugin'
-version '0.0.3'
+version '0.0.4'
 
 repositories {
     mavenCentral()
@@ -29,3 +29,6 @@ dependencies {
     testCompile 'junit:junit:4.13'
 }
 
+tasks.withType(JavaCompile) {
+    options.compilerArgs << "-Xlint:all" << "-Werror"
+}

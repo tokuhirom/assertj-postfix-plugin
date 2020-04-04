@@ -13,8 +13,8 @@ import com.intellij.psi.PsiElement;
 public class AssertJTemplate extends StringBasedPostfixTemplate {
 
     public AssertJTemplate() {
-        super("assertThat", "assertThat(expr);",
-             JavaPostfixTemplatesUtils.selectorAllExpressionsWithCurrentOffset(JavaPostfixTemplatesUtils.IS_NON_VOID));
+        super("assertThat", "assertThat(expr);", JavaPostfixTemplatesUtils
+                .selectorAllExpressionsWithCurrentOffset(JavaPostfixTemplatesUtils.IS_NON_VOID), null);
     }
 
     @Override
