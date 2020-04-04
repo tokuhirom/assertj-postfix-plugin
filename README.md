@@ -11,3 +11,7 @@ This plugin adds `.assertThat` postfix completion.
 ## LICENSE
 
 Public domain.
+
+## See also
+
+https://plugins.jetbrains.com/plugin/8093-assertj-postfix-completion-plugin
