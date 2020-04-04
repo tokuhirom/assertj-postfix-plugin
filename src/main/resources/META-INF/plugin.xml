@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>me.geso.assertj_postfix_plugin</id>
     <name>AssertJ Postfix Completion Plugin</name>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <vendor email="tokuhirom+intellij@gmail.com" url="http://64p.org">tokuhirom</vendor>
 
     <description><![CDATA[
