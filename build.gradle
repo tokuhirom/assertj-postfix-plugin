@@ -1,38 +1,46 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij' version '1.17.4'
+    id 'org.jetbrains.intellij.platform'
 }
 
 group = 'me.geso.assertj_postfix_plugin'
 version = '0.0.4'
 
-sourceCompatibility = 17
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
 
 repositories {
     mavenCentral()
-}
-
-intellij {
-    version = '2024.1'
-    plugins = ['com.intellij.java']
-    updateSinceUntilBuild = false
-}
-
-tasks {
-    patchPluginXml {
-        sinceBuild = '241'
+    intellijPlatform {
+        defaultRepositories()
     }
 }
 
-// Write `intellijPublishToken=YOUR_HUB_TOKEN_HERE` in your gradle.properties.
-publishPlugin {
-    token = providers.gradleProperty('intellijPublishToken')
-}
-
 dependencies {
+    intellijPlatform {
+        intellijIdeaCommunity('2024.1')
+        bundledPlugin('com.intellij.java')
+        pluginVerifier()
+        instrumentationTools()
+    }
     testImplementation platform('org.junit:junit-bom:5.11.4')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+intellijPlatform {
+    pluginConfiguration {
+        ideaVersion {
+            sinceBuild = '241'
+        }
+    }
+    buildSearchableOptions = false
+    // Write `intellijPublishToken=YOUR_HUB_TOKEN_HERE` in your gradle.properties.
+    publishing {
+        token = providers.gradleProperty('intellijPublishToken')
+    }
 }
 
 test {
