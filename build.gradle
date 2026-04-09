@@ -1,32 +1,36 @@
 plugins {
-    id "org.jetbrains.intellij" version "0.7.3"
+    id 'java'
+    id 'org.jetbrains.intellij' version '1.17.4'
 }
 
-apply plugin: 'org.jetbrains.intellij'
-apply plugin: 'java'
+group = 'me.geso.assertj_postfix_plugin'
+version = '0.0.4'
 
-
-sourceCompatibility = 1.8
-
-intellij {
-    plugins = ['java']
-    updateSinceUntilBuild false
-}
-
-// Write `intellijPublishToken=YOUR_HUB_TOKEN_HERE` in your gradle.properties.
-publishPlugin {
-    token intellijPublishToken
-}
-
-group 'me.geso.assertj_postfix_plugin'
-version '0.0.4'
+sourceCompatibility = 17
 
 repositories {
     mavenCentral()
 }
 
+intellij {
+    version = '2024.1'
+    plugins = ['com.intellij.java']
+    updateSinceUntilBuild = false
+}
+
+tasks {
+    patchPluginXml {
+        sinceBuild = '241'
+    }
+}
+
+// Write `intellijPublishToken=YOUR_HUB_TOKEN_HERE` in your gradle.properties.
+publishPlugin {
+    token = providers.gradleProperty('intellijPublishToken')
+}
+
 dependencies {
-    testCompile 'junit:junit:4.13.1'
+    testImplementation 'junit:junit:4.13.2'
 }
 
 tasks.withType(JavaCompile) {
