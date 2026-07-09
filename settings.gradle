@@ -6,7 +6,7 @@ pluginManagement {
 }
 
 plugins {
-    id 'org.jetbrains.intellij.platform.settings' version '2.5.0'
+    id 'org.jetbrains.intellij.platform.settings' version '2.18.0'
 }
 
 rootProject.name = 'assertj-postfix-plugin'
