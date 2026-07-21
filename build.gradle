@@ -23,7 +23,6 @@ dependencies {
         intellijIdeaCommunity('2024.1')
         bundledPlugin('com.intellij.java')
         pluginVerifier()
-        instrumentationTools()
     }
     testImplementation platform('org.junit:junit-bom:6.1.2')
     testImplementation 'org.junit.jupiter:junit-jupiter'
